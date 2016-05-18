@@ -21,12 +21,12 @@ class ArticlesController < ApplicationController
     # twitter 同時投稿
     if current_user.uid && article.twittercheck == 1
       client = Twitter::REST::Client.new do |config|
-        config.consumer_key         = ENV['TWITTER_KEY']
-        config.consumer_secret      = ENV['TWITTER_SECRET']
+        config.consumer_key         = ENV['PETTEE_TWITTER_KEY']
+        config.consumer_secret      = ENV['PETTEE_TWITTER_SECRET']
         config.access_token         = current_user.token
         config.access_token_secret  = current_user.secret
       end
-      status = "ROOMEEに【#{article.category}】の写真を登録しました！「#{article.comment}」"
+      status = "PETTEEに【#{article.category}】の写真を登録しました！「#{article.comment}」"
       media_url = "#{article.image.url}"
       media = open(media_url)
       client.update_with_media(status, media)

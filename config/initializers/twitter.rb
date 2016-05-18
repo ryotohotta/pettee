@@ -1,4 +1,4 @@
 @client = Twitter::REST::Client.new do |config|
-  config.consumer_key       = ENV['TWITTER_KEY']
-  config.consumer_secret    = ENV['TWITTER_SECRET']
+  config.consumer_key       = ENV['PETTEE_TWITTER_KEY']
+  config.consumer_secret    = ENV['PETTEE_TWITTER_SECRET']
 end

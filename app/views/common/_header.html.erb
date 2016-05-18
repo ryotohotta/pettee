@@ -1,17 +1,23 @@
 
-<nav class="teal darken-2">
+<nav class="orange darken-3">
   <div class="nav-wrapper">
     <% if user_signed_in? %>
-      <%= link_to "ROOMEE", "/", :class => "brand-logo" %>
+      <%= link_to "/", :class => "brand-logo" do %>
+        <i class="material-icons tiny left">pets</i>
+        <p class="left">PETTEE</p>
+      <% end %>
     <% else %>
-      <%= link_to "ROOMEE", "/top/index", :class => "brand-logo" %>
+      <%= link_to "/top/index", :class => "brand-logo" do %>
+        <i class="material-icons tiny left">pets</i>
+        <p class="left">PETTEE</p>
+      <% end %>
     <% end %>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <% if user_signed_in? %>
       <ul class="right hide-on-med-and-down">
         <li>
           <%= link_to "/articles/", :method => :get do %>
-            <i class="material-icons float-left">swap_horiz</i>ROOMEEする
+            <i class="material-icons float-left">swap_horiz</i>PETTEEする
           <% end %>
         </li>
         <li>
@@ -37,7 +43,7 @@
       <ul class="side-nav" id="mobile-demo">
         <li>
           <%= link_to "/articles/", :method => :get do %>
-            <i class="material-icons float-left">swap_horiz</i>ROOMEE
+            <i class="material-icons float-left">swap_horiz</i>PETTEE
           <% end %>
         </li>
         <li><a href="/users/<%= current_user.id %>"><i class="material-icons float-left">perm_identity</i>マイページ</a></li>

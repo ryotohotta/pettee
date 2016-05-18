@@ -16,7 +16,7 @@
 
     <div class="file-field input-field">
       <span><%= image_tag(current_user.photo.url, :class => "float-left user-img circle responsive-img", :style => "width: 40px") %></span>
-      <div class="btn">
+      <div class="btn orange darken-3">
         <span>プロフィール画像を変更</span><br />
         <%= f.file_field :photo %><br />
       </div>
@@ -57,7 +57,7 @@
     <div class="clearfix"></div>
 
     <div class="button-wrapper center-align">
-      <button class="btn-large waves-effect waves-light actions">
+      <button class="btn-large waves-effect waves-light orange darken-3 actions">
         <i class="material-icons right">send</i>
         <%= f.submit "更新する" %>
       </button>

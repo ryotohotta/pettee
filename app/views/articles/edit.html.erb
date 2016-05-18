@@ -2,7 +2,7 @@
   <%= form_for(@article, html:{class: 'image-form', method: :patch}, :html => {:multipart => true}) do |f| %>
     <span><%= image_tag(@article.image.url, :class => "card-img circle responsive-img", :style => "width: 500px") %></span>
     <div class="file-field input-field">
-      <div class="btn">
+      <div class="btn orange darken-3">
         <span>画像を選択</span>
         <%= f.file_field :image %>
       </div>
@@ -20,7 +20,7 @@
           <%= f.label :icon_prefix2, "コメントする" %>
        </div>
       </div>
-    <button class="btn-large waves-effect waves-light right" name="action">
+    <button class="btn-large waves-effect waves-light right orange darken-3" name="action">
       <%= f.submit "更新する" %>
     </button>
     <div class="clearfix"></div>
